@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/register/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -9,6 +10,14 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle":"black"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index"
+  }
 }

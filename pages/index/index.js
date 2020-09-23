@@ -50,5 +50,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  initButton: function(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: '../register/index'
+    })
   }
 })
