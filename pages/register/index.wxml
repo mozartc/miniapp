@@ -26,5 +26,6 @@
     <van-row gutter="20">
     <van-col offset="8"><van-button bind:click="submit">提交</van-button></van-col>
     </van-row>
+    <van-toast id="van-toast" />
     </view>
 </view>

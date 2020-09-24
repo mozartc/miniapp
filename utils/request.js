@@ -1,8 +1,11 @@
+import Toast from '../miniprogram_npm/@vant/weapp/toast/toast';
+
 var app = getApp();
  //项目URL相同部分，减轻代码量，同时方便项目迁移
  //这里因为我是本地调试，所以host不规范，实际上应该是你备案的域名信息
  var host = 'http://39.97.65.254:8099/aliyun/';
- 
+//  var host = 'http://127.0.0.1:8099/aliyun/';
+
  /**
   * POST请求，
   * URL：接口
@@ -22,6 +25,13 @@ var app = getApp();
      success: function (res) {
        //参数值为res.data,直接将返回的数据传入
        //doSuccess(res.data);
+       Toast({
+        type: 'success',
+        message: '提交成功',
+        onClose: () => {
+          console.log('执行OnClose函数');
+        },
+      });
      },
      fail: function () {
        //doFail();
