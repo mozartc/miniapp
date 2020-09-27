@@ -4,10 +4,23 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'こんにちは',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    showShare: false,
+    options: [
+      [
+        { name: '微信', icon: 'wechat' },
+        { name: '微博', icon: 'weibo' },
+        { name: 'QQ', icon: 'qq' },
+      ],
+      [
+        { name: '复制链接', icon: 'link' },
+        { name: '分享海报', icon: 'poster' },
+        { name: '二维码', icon: 'qrcode' },
+      ],
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -55,6 +68,18 @@ Page({
     console.log(e)
     wx.navigateTo({
       url: '../register/index'
+    })
+  },
+  shareButton: function(e) {
+    console.log(e)
+    this.setData({
+      showShare: true
+    })
+  },
+  cancel: function(e) {
+    console.log(e)
+    this.setData({
+      showShare: false
     })
   }
 })

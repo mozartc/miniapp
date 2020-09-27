@@ -28,4 +28,9 @@
         </van-row>
         <van-toast id="van-toast" />
     </view>
+    <view class="usermottoBtn">
+        <van-button type="primary" bind:click="initButton">查询用户信息</van-button>
+        <van-button type="primary" bind:click="initButton">修改用户</van-button>
+        <van-button type="primary" bind:click="initButton">注销用户</van-button>
+    </view>
 </view>

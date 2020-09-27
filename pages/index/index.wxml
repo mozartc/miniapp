@@ -8,8 +8,16 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-    <button class="user-motto">{{motto}}</button>
-    <van-button type="primary" bind:click="initButton">按钮</van-button>
+    <van-button type="primary" bind:click="initButton">注册用户</van-button>
   </view>
+  <view class="usermottoBtn">
+  <van-button type="primary" bind:click="shareButton">分享</van-button>
+  <van-button type="primary" bind:click="initButton">查询用户信息</van-button>
+  </view>
+  <van-share-sheet
+      show="{{ showShare }}"
+      title="分享"
+      options="{{ options }}"
+      bind:close="cancel"
+    />
 </view>
